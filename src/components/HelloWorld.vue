@@ -124,6 +124,11 @@ export default {
   props: {
     msg: String,
   },
+  created() {
+    this.axios.get("http://localhost:3000/").then((res) => {
+      console.log(res);
+    });
+  },
 };
 </script>
 
