@@ -1,0 +1,12 @@
+steps:
+  - name: node:12
+    entrypoint: yarn
+    args: ["install"]
+
+  - name: node:12
+    entrypoint: yarn
+    args: ["run", "build"]
+
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    args: ["gcloud", "app", "deploy", "app.yaml"]
+tags: ["unfinished"]
