@@ -12,6 +12,9 @@ export default {
     articleData() {
       return this.$store.state.articleData;
     },
+    selectedWords() {
+      return this.$store.state.selectedWords;
+    },
   },
   methods: {
     clickPlay() {
