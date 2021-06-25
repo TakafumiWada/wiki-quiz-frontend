@@ -31,15 +31,19 @@ export default new Vuex.Store({
       state.articleData = payload;
     },
     selectWords(state) {
-      state.selectedWords = randomSelect(
-        state.articleData.words,
-        state.selectedWordsNumber
-      );
+      if (state.articleData.words.length) {
+        state.selectedWords = randomSelect(
+          state.articleData.words,
+          state.selectedWordsNumber
+        );
+      }
     },
   },
   actions: {
     async getArticleData(context) {
-      const res = await axios.get("http://localhost:3000/");
+      const res = await axios.get(
+        "https://wiki-quiz-backend-prod.an.r.appspot.com/"
+      );
       const articleData = res.data;
       if (!articleData) return;
       context.commit("getArticleData", articleData);
