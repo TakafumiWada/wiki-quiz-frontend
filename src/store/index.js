@@ -3,13 +3,23 @@ import Vuex from "vuex";
 import axios from "axios";
 
 Vue.use(Vuex);
+const limitedWordLength = 18;
+// const BASE_URL = "https://wiki-quiz-backend-prod.an.r.appspot.com";
+const BASE_URL = "http://localhost:3000";
 
 const randomSelect = (array, num) => {
   let newArray = [];
+  let rand = 0;
+  const limitedWords = array.filter((element) => {
+    return element.length <= limitedWordLength;
+  });
+  num = Math.min(num, limitedWords.length);
   while (newArray.length < num && array.length > 0) {
-    const rand = Math.floor(Math.random() * array.length);
-    newArray.push(array[rand]);
-    array.splice(rand, 1);
+    rand = Math.floor(Math.random() * array.length);
+    if (array[rand].length < limitedWordLength) {
+      newArray.push(array[rand]);
+      array.splice(rand, 1);
+    }
   }
   return newArray;
 };
@@ -41,9 +51,7 @@ export default new Vuex.Store({
   },
   actions: {
     async getArticleData(context) {
-      const res = await axios.get(
-        "https://wiki-quiz-backend-prod.an.r.appspot.com/"
-      );
+      const res = await axios.get(`${BASE_URL}/article/get`);
       const articleData = res.data;
       if (!articleData) return;
       context.commit("getArticleData", articleData);

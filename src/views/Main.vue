@@ -63,7 +63,9 @@ export default {
     },
     clickAnswer() {
       this.answerText =
-        this.inputAnswer === this.articleData.title ? "正解" : "不正解";
+        this.inputAnswer === this.articleData.title
+          ? "正解！"
+          : `不正解...  正解は"${this.articleData.title}"`;
     },
   },
 };
