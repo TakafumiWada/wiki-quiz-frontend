@@ -31,7 +31,7 @@ export default new Vuex.Store({
       state.articleData = payload;
     },
     selectWords(state) {
-      if (state.articleData.words.length) {
+      if (state.articleData.words?.length) {
         state.selectedWords = randomSelect(
           state.articleData.words,
           state.selectedWordsNumber
