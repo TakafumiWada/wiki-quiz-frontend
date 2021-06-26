@@ -32,6 +32,9 @@
       <div v-if="answerText">
         <div class="anwer__text">{{ answerText }}</div>
         <div class="anwer__image"><img :src="articleData.image" alt="" /></div>
+        <b-field>
+          <b-button @click="tweetAnswer" rounded>Tweet</b-button>
+        </b-field>
       </div>
     </div>
   </div>
@@ -99,6 +102,10 @@ export default {
           text: this.inputAnswer,
         });
       }
+    },
+    tweetAnswer() {
+      const url = `https://twitter.com/intent/tweet?text=私は"${this.searchResult}"と答えました。&url=https://wiki-quiz-frontend-prod.an.r.appspot.com/`;
+      window.open(url, "_blank");
     },
   },
 };
