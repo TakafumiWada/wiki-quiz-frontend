@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,6 +7,19 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
 
+    <!-- ORG Start -->
+    <meta property="og:title" content="タイトル" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="ページの簡単な説明" />
+    <meta
+      property="og:url"
+      content="https://wiki-quiz-frontend-prod.an.r.appspot.com/"
+    />
+    <meta property="og:site_name" content="サイトのタイトル" />
+    <meta
+      property="og:image"
+      content="https://pbs.twimg.com/media/D85k13vUYAAskeJ.jpg"
+    />
     <!-- TwitterCard -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@wdtk2525" />
