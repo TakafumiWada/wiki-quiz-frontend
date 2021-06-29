@@ -119,9 +119,10 @@ export default {
 }
 .word {
   width: 25%;
-  min-width: 200px;
+  min-width: 150px;
   height: 100px;
   margin: 0 5px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;

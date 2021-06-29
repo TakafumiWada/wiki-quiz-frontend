@@ -3,8 +3,8 @@ import Vuex from "vuex";
 import axios from "axios";
 Vue.use(Vuex);
 
-// const BASE_URL = "https://wiki-quiz-backend-prod.an.r.appspot.com";
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://wiki-quiz-backend-prod.an.r.appspot.com";
+// const BASE_URL = "http://localhost:3000";
 const LIMITED_WORD_LENGTH = 18;
 
 const randomSelect = (array, num) => {
