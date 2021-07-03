@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <div><button @click="linkToMain">WikiQuizに挑む</button></div> -->
     <section class="top">
       <div class="top__topic">
         <div class="top__topic--main">WikiQuiz</div>
@@ -8,6 +7,9 @@
           <div>text text text text text text</div>
           <div>text text text text text text</div>
           <div>text text text</div>
+        </div>
+        <div class="top__topic--button">
+          <button @click="linkToMain">WikiQuizに挑む</button>
         </div>
       </div>
     </section>
@@ -28,10 +30,62 @@
           </div>
           <div class="about__button"><button>more</button></div>
         </div>
-        <div class="about__image"><img src="" alt="" /></div>
+        <div class="about__image">
+          <div
+            style="
+              height: 300px;
+              width: 400px;
+              background-color: rgb(214, 214, 149);
+            "
+          ></div>
+        </div>
       </div>
     </section>
-    <section class="howto"></section>
+    <section class="section-footer">
+      <div class="section-footer__button">
+        <button @click="linkToMain">WikiQuizに挑む</button>
+      </div>
+    </section>
+    <section class="howto">
+      <div class="howto__topic">HowTo</div>
+      <div class="howto__contents">
+        <!-- ここはコンポーネントで切り出す -->
+        <div class="howto__section howto__section--one">
+          <div class="howto__section--topic">①考える。</div>
+          <div class="howto__section--image"></div>
+          <div class="howto__section--subtopic">
+            text text text text text text text text
+          </div>
+        </div>
+        <div class="howto__section howto__section--two">
+          <div class="howto__section--topic">②もっと考える。</div>
+          <div class="howto__section--image"></div>
+          <div class="howto__section--subtopic">
+            text text text text text text text text
+          </div>
+        </div>
+        <div class="howto__section howto__section--three">
+          <div class="howto__section--topic">③発見する。</div>
+          <div class="howto__section--image"></div>
+          <div class="howto__section--subtopic">
+            text text text text text text text text
+          </div>
+        </div>
+        <div class="howto__section howto__section--four">
+          <div class="howto__section--topic">④世界が広がる。</div>
+          <div class="howto__section--image"></div>
+          <div class="howto__section--subtopic">
+            text text text text text text text text
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ここはコンポーネントで切り出す -->
+    <section class="section-footer">
+      <div class="section-footer__button">
+        <button @click="linkToMain">WikiQuizに挑む</button>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -46,27 +100,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.top {
-  height: 100vh;
-  width: 100vw;
-  background-color: aliceblue;
-  &__topic {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    &--main {
-      margin: 20px 0;
-      font-size: 5em;
-      font-weight: 600;
-    }
-    &--sub {
-      font-size: 1.2em;
-    }
-  }
-}
-.about {
-  height: 90vh;
-  width: 100vw;
-  background-color: beige;
-}
+$border-size: 2.5px;
+@import "../stylesheets/home";
 </style>

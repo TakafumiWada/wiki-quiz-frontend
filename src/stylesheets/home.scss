@@ -1,0 +1,138 @@
+.top {
+  height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
+  &__topic {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    &--main {
+      margin: 20px 0;
+      font-size: 5em;
+      font-weight: 600;
+    }
+    &--sub {
+      font-size: 1.2em;
+    }
+    &--button {
+      margin-top: 20px;
+      button {
+        font-size: 20px;
+        padding: 5px 25px;
+      }
+    }
+  }
+}
+.about {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: beige;
+  &__topic {
+    margin: 5vh 0;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  &__contents {
+    margin-top: 5vh;
+    width: 100vw;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__text {
+    &--main {
+      font-weight: bold;
+      font-size: 2em;
+    }
+    &--sub {
+      margin-top: 5vh;
+      font-size: 1.3em;
+    }
+  }
+  &__button {
+    margin-top: 4vh;
+    button {
+      font-size: 20px;
+      padding: 5px 25px;
+    }
+  }
+  &__image {
+    margin-top: 1.5vh;
+  }
+}
+.section-footer {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(214, 214, 166);
+  &__button {
+    button {
+      font-size: 1.5em;
+      padding: 0 25px;
+    }
+  }
+}
+.howto {
+  height: 90vh;
+  width: 100vw;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__topic {
+    margin: 5vh 0;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  &__contents {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__section {
+    height: 50%;
+    width: 40%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--topic {
+      margin-top: 10px;
+      font-size: 1.7em;
+      font-weight: bold;
+    }
+    &--image {
+      margin-top: 10px;
+      height: 50%;
+      width: 50%;
+      background-color: rgb(214, 214, 149);
+    }
+    &--subtopic {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    &--one {
+      border-right: $border-size solid white;
+      border-bottom: $border-size solid white;
+    }
+    &--two {
+      border-left: $border-size solid white;
+      border-bottom: $border-size solid white;
+    }
+    &--three {
+      border-right: $border-size solid white;
+      border-top: $border-size solid white;
+    }
+    &--four {
+      border-top: $border-size solid white;
+      border-left: $border-size solid white;
+    }
+  }
+}

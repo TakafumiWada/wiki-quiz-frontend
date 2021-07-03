@@ -4,14 +4,17 @@
     <main id="main">
       <router-view />
     </main>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
@@ -19,6 +22,7 @@ export default {
 <style lang="scss">
 #app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

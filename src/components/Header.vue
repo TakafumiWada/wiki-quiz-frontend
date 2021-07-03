@@ -27,7 +27,7 @@ export default {
     justify-content: center;
     align-items: center;
     z-index: 99;
-    background-color: rgba(248, 247, 247, 0.5);
+    background-color: rgba(221, 221, 221, 0.5);
     cursor: pointer;
   }
   &__content {
