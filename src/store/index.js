@@ -31,8 +31,11 @@ export default new Vuex.Store({
       image: "",
     },
     searchResult: "",
+    selectedCategoriesNumber: 3,
+    selectedCategories: [],
     selectedWordsNumber: 9,
     selectedWords: [],
+    isLoading: false,
   },
   mutations: {
     getArticleData(state, payload) {
@@ -46,16 +49,37 @@ export default new Vuex.Store({
         );
       }
     },
+    selectCategories(state) {
+      if (state.articleData.title) {
+        if (state.articleData.categories.length < 3) {
+          state.selectedCategories = state.articleData.categories;
+          return;
+        }
+        state.selectedCategories = randomSelect(
+          state.articleData.categories,
+          state.selectedCategoriesNumber
+        );
+      }
+    },
     getSearchResult(state, payload) {
       state.searchResult = payload.searchResult;
+    },
+    startLoading(state) {
+      state.isLoading = true;
+    },
+    endLoading(state) {
+      state.isLoading = false;
     },
   },
   actions: {
     async getArticleData(context) {
+      context.commit("startLoading");
       const res = await axios.get(`${BASE_URL}/article/get`);
+      context.commit("endLoading");
       const articleData = res.data;
       context.commit("getArticleData", articleData);
       context.commit("selectWords");
+      context.commit("selectCategories");
     },
     async searchArticleData(context, payload) {
       const res = await axios.post(`${BASE_URL}/article/search`, {

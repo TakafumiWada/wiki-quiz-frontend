@@ -93,7 +93,7 @@
 export default {
   methods: {
     linkToMain() {
-      this.$router.push("/main");
+      this.$router.push("/start");
     },
   },
 };
