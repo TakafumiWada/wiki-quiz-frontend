@@ -29,6 +29,7 @@ export default new Vuex.Store({
       topic: {},
       words: [],
       image: "",
+      url: "",
     },
     searchResult: "",
     selectedCategoriesNumber: 3,

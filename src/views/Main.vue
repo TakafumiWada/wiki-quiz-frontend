@@ -28,7 +28,9 @@
             />
           </div>
           <div class="answer-view__text">
-            A.&nbsp;&nbsp;&nbsp;&nbsp;{{ articleData.title }}
+            <a :href="titleUrl"
+              >A.&nbsp;&nbsp;&nbsp;&nbsp;{{ articleData.title }}</a
+            >
           </div>
           <div class="answer-view__subtext">
             答えをクリックしてWikipediaを確認してみよう！
@@ -160,6 +162,9 @@ export default {
     titleHead() {
       if (!this.articleData.title) return;
       return this.articleData.title.charAt(0);
+    },
+    titleUrl() {
+      return this.articleData.url;
     },
     isLoading() {
       return this.$store.state.isLoading;
