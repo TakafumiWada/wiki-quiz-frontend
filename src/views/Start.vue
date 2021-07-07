@@ -1,7 +1,13 @@
 <template>
   <section class="start">
-    <div class="start__text">text text text text</div>
-    <div class="start__button"><button @click="clickEnter">enter</button></div>
+    <div class="start__text">
+      <div>新たな発見を求めて</div>
+      <div>WikiQuizに挑みますか？</div>
+    </div>
+    <div class="start__button" @click="clickEnter">
+      <div class="start__button--sub">挑む</div>
+      <div class="start__button--main">TRY</div>
+    </div>
   </section>
 </template>
 
@@ -17,11 +23,30 @@ export default {
 
 <style lang="scss" scoped>
 .start {
+  color: #fdfdfd;
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-image: url(../../public/images/play_start.png);
+  background-size: cover;
+  &__text {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 13%;
+  }
+  &__button {
+    margin-top: 10%;
+    text-align: center;
+    cursor: pointer;
+    &--sub {
+      font-size: 20px;
+      margin-bottom: -10px;
+    }
+    &--main {
+      font-size: 40px;
+    }
+  }
 }
 </style>

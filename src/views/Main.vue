@@ -3,13 +3,20 @@
     <b-loading v-model="isLoading"></b-loading>
     <div v-if="isShow" class="main">
       <section class="main-left">
-        <div class="main-left__topic">関連ワードは...</div>
+        <div class="main-left__topic">
+          <div class="main-left__topic--text">関連ワード</div>
+          <img
+            class="main-left__topic--pencil"
+            src="../../public/images/main_pencil.png"
+          />
+        </div>
         <div class="word__container">
           <div
-            class="box word"
+            class="word"
             v-for="(word, index) in selectedWords"
             :key="`wordIndex:${index}`"
           >
+            <div class="word__round"></div>
             <div class="word__inner">{{ word }}</div>
           </div>
         </div>
@@ -45,64 +52,102 @@
           </div>
         </div>
         <div class="main-right__not-answer" v-else>
-          <div class="main-right__topic">ヒント</div>
+          <div class="main-right__topic">
+            <div class="main-right__topic--text">ヒント</div>
+            <img
+              class="main-right__topic--light"
+              src="../../public/images/main_light.png"
+            />
+          </div>
           <div class="hint">
-            <div class="hint__count">
-              <div class="hint__count--text">文字数は...</div>
-              <div class="hint__count--hint">
-                <div class="hint__count--hint--text">{{ titleLength }}文字</div>
-                <div class="hint-mask__wrapper">
-                  <div
-                    class="hint-mask"
-                    v-show="!isAnimationEnd[0]"
-                    v-bind:class="{
-                      mask: isAnimationStart[0],
-                    }"
-                    @click="animationStart(0)"
-                    @animationend="animationEnd(0)"
-                  ></div>
+            <div class="hint__round"></div>
+            <div class="hint__contents">
+              <div class="hint__count">
+                <div class="hint__count--text">
+                  Hint1.&nbsp;&nbsp;&nbsp;&nbsp;文字数は...
                 </div>
-              </div>
-            </div>
-            <div class="hint__category">
-              <div class="hint__category--text">カテゴリーは...</div>
-              <div class="hint__category--hint">
-                <div class="hint__category--hint--inner">
-                  <div
-                    class="hint__category--hint--element"
-                    v-for="category in selectedCategories"
-                    :key="category"
-                  >
-                    {{ category }}
+                <div class="hint__count--hint">
+                  <div class="hint__count--hint--text">
+                    {{ titleLength }}文字
+                  </div>
+                  <div class="hint-mask__wrapper">
+                    <div
+                      class="hint-mask"
+                      v-show="!isAnimationEnd[0]"
+                      v-bind:class="{
+                        mask: isAnimationStart[0],
+                      }"
+                      @click="animationStart(0)"
+                      @animationend="animationEnd(0)"
+                    >
+                      <div
+                        class="hint-mask__text"
+                        v-show="!isAnimationStart[0]"
+                      >
+                        Click!
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="hint-mask__wrapper">
-                  <div
-                    class="hint-mask"
-                    v-show="!isAnimationEnd[1]"
-                    v-bind:class="{
-                      mask: isAnimationStart[1],
-                    }"
-                    @click="animationStart(1)"
-                    @animationend="animationEnd(1)"
-                  ></div>
+              </div>
+              <div class="hint__category">
+                <div class="hint__category--text">
+                  Hint2.&nbsp;&nbsp;&nbsp;カテゴリーは...
+                </div>
+                <div class="hint__category--hint">
+                  <div class="hint__category--hint--inner">
+                    <div
+                      class="hint__category--hint--element"
+                      v-for="category in selectedCategories"
+                      :key="category"
+                    >
+                      {{ category }}
+                    </div>
+                  </div>
+                  <div class="hint-mask__wrapper">
+                    <div
+                      class="hint-mask"
+                      v-show="!isAnimationEnd[1]"
+                      v-bind:class="{
+                        mask: isAnimationStart[1],
+                      }"
+                      @click="animationStart(1)"
+                      @animationend="animationEnd(1)"
+                    >
+                      <div
+                        class="hint-mask__text"
+                        v-show="!isAnimationStart[1]"
+                      >
+                        Click!
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="hint__head">
-              <div class="hint__head--text">頭文字は...</div>
-              <div class="hint__head--hint">
-                <div class="hint__head--hint--text">「{{ titleHead }}」</div>
-                <div class="hint-mask__wrapper">
-                  <div
-                    class="hint-mask"
-                    v-show="!isAnimationEnd[2]"
-                    v-bind:class="{
-                      mask: isAnimationStart[2],
-                    }"
-                    @click="animationStart(2)"
-                    @animationend="animationEnd(2)"
-                  ></div>
+              <div class="hint__head">
+                <div class="hint__head--text">
+                  Hint3.&nbsp;&nbsp;&nbsp;&nbsp;頭文字は...
+                </div>
+                <div class="hint__head--hint">
+                  <div class="hint__head--hint--text">「{{ titleHead }}」</div>
+                  <div class="hint-mask__wrapper">
+                    <div
+                      class="hint-mask"
+                      v-show="!isAnimationEnd[2]"
+                      v-bind:class="{
+                        mask: isAnimationStart[2],
+                      }"
+                      @click="animationStart(2)"
+                      @animationend="animationEnd(2)"
+                    >
+                      <div
+                        class="hint-mask__text"
+                        v-show="!isAnimationStart[2]"
+                      >
+                        Click!
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,7 +156,7 @@
             <div class="answer__input--wrapper">
               <input
                 class="answer__input"
-                placeholder="answer"
+                placeholder="この記事のタイトルは？"
                 v-model="inputAnswer"
               />
             </div>

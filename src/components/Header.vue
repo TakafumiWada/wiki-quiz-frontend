@@ -21,18 +21,19 @@ export default {
 .icon {
   &__container {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 99;
-    background-color: rgba(221, 221, 221, 0.5);
+    background-color: #ffffffb3;
     cursor: pointer;
   }
   &__content {
-    margin: 5px 10px;
-    font-size: 30px;
+    margin: 5px 20px;
+    font-size: 40px;
+    letter-spacing: 0.9px;
   }
 }
 </style>

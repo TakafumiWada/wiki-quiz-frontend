@@ -100,6 +100,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-size: 2.5px;
 @import "../stylesheets/home";
 </style>
