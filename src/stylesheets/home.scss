@@ -2,55 +2,86 @@ $border-size: 2.5px;
 .top {
   height: 100vh;
   width: 100vw;
-  background-color: aliceblue;
+  background-image: url(../../public/images/home_background.png);
+  background-size: cover;
+  z-index: 0;
   &__topic {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 10%;
+    color: black;
+    z-index: 2;
     &--main {
       margin: 20px 0;
-      font-size: 5em;
+      font-size: 100px;
       font-weight: 600;
+      letter-spacing: 2.25px;
     }
     &--sub {
-      font-size: 1.2em;
+      font-size: 20px;
+      letter-spacing: 1.57px;
     }
     &--button {
-      margin-top: 20px;
+      margin-top: 50px;
       button {
+        height: 50px;
+        width: 220px;
         font-size: 20px;
-        padding: 5px 25px;
+        color: white;
+        background-color: $sub-color;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        div {
+          height: 30px;
+          width: 190px;
+          line-height: 30px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.548);
+        }
       }
     }
   }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
 }
 .about {
-  height: 90vh;
+  height: 77vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: beige;
+  background-color: $main-color;
+  color: white;
   &__topic {
     margin: 5vh 0;
-    font-size: 2em;
+    font-size: 40px;
     font-weight: bold;
+    letter-spacing: 0.9px;
   }
   &__contents {
     margin-top: 5vh;
     width: 100vw;
-    max-width: 1000px;
+    max-width: 1500px;
     display: flex;
     justify-content: space-around;
   }
   &__text {
     &--main {
-      font-weight: bold;
-      font-size: 2em;
+      font-size: 43px;
     }
     &--sub {
       margin-top: 5vh;
-      font-size: 1.3em;
+      font-size: 20px;
     }
   }
   &__button {
@@ -62,26 +93,44 @@ $border-size: 2.5px;
   }
   &__image {
     margin-top: 1.5vh;
+    &--inner {
+      height: 300px;
+    }
   }
 }
 .section-footer {
-  height: 10vh;
+  height: 23vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(214, 214, 166);
+  background-color: $home-color;
   &__button {
     button {
-      font-size: 1.5em;
-      padding: 0 25px;
+      height: 70px;
+      width: 300px;
+      font-size: 30px;
+      color: white;
+      background-color: transparent;
+      border: 2px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      div {
+        height: 40px;
+        width: 220px;
+        line-height: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.548);
+      }
     }
   }
 }
 .howto {
   height: 90vh;
   width: 100vw;
-  background-color: beige;
+  background-color: #2b2e4a;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,20 +153,27 @@ $border-size: 2.5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    &--inner {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &--topic {
+      width: 100%;
       margin-top: 10px;
-      font-size: 1.7em;
-      font-weight: bold;
+      font-size: 25px;
     }
     &--image {
       margin-top: 10px;
       height: 50%;
-      width: 50%;
-      background-color: rgb(214, 214, 149);
+      width: 60%;
+      background-color: white;
     }
     &--subtopic {
       margin-top: 10px;
-      font-size: 1.2em;
+      font-size: 15px;
     }
     &--one {
       border-right: $border-size solid white;

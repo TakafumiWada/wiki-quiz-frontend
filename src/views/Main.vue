@@ -35,7 +35,7 @@
             />
           </div>
           <div class="answer-view__text">
-            <a :href="titleUrl"
+            <a :href="titleUrl" target="_blank"
               >A.&nbsp;&nbsp;&nbsp;&nbsp;{{ articleData.title }}</a
             >
           </div>
