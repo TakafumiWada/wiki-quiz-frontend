@@ -142,6 +142,7 @@ $border-size: 2.5px;
   &__contents {
     height: 80%;
     width: 100%;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
