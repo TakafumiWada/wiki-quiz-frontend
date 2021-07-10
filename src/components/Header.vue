@@ -31,6 +31,8 @@ export default {
     cursor: pointer;
   }
   &__content {
+    font-family: $traviraj;
+    font-weight: 400;
     margin: 5px 20px;
     font-size: 40px;
     letter-spacing: 0.9px;

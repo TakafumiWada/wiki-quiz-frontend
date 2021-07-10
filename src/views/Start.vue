@@ -2,7 +2,7 @@
   <section class="start">
     <div class="start__text">
       <div>新たな発見を求めて</div>
-      <div>WikiQuizに挑みますか？</div>
+      <div><span class="start__text--en">WikiQuiz</span>に挑みますか？</div>
     </div>
     <div class="start__button" @click="clickEnter">
       <div class="start__button--sub">挑む</div>
@@ -33,19 +33,28 @@ export default {
   background-size: cover;
   &__text {
     text-align: center;
+    font-family: $noto-sans;
     font-size: 50px;
+    letter-spacing: 4.8px;
     margin-top: 13%;
+    &--en {
+      font-family: $traviraj;
+    }
   }
   &__button {
     margin-top: 10%;
     text-align: center;
     cursor: pointer;
     &--sub {
+      font-family: $noto-sans;
       font-size: 20px;
       margin-bottom: -10px;
+      letter-spacing: 1.5px;
     }
     &--main {
+      font-family: $traviraj;
       font-size: 40px;
+      letter-spacing: 2px;
     }
   }
 }

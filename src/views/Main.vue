@@ -25,8 +25,14 @@
         </div>
       </section>
       <section class="main-right">
-        <div class="main-right__answer-view" v-if="isAnswer">
-          <div class="answer-view__topic">答えは...</div>
+        <div class="main-right__answer-view" v-if="showAnswer">
+          <div class="answer-view__topic">
+            <div class="answer-view__topic--text">答え</div>
+            <img
+              class="answer-view__topic--image"
+              src="../../public/images/main_book.png"
+            />
+          </div>
           <div class="answer-view__image--wrapper">
             <img
               class="answer-view__image"
@@ -46,8 +52,14 @@
             <div class="answer-view__tweet--text">
               あなたの答えをシェアしよう！
             </div>
-            <div class="answer-view__tweet--button">
-              <button @click="tweetAnswer">Tweet</button>
+            <div class="answer-view__tweet--button--wrapper">
+              <div class="answer-view__tweet--button" @click="tweetAnswer">
+                <img
+                  class="answer-view__tweet--button--image"
+                  src="../../public/images/main_twitter.png"
+                />
+                <div class="answer-view__tweet--button--text">Tweet</div>
+              </div>
             </div>
           </div>
         </div>
@@ -164,8 +176,22 @@
               <button class="answer__button" @click="clickAnswer">Go</button>
             </div>
           </div>
-          <div class="link_answer--wrapper">
-            <button class="link_answer" @click="isAnswer = true">
+          <div v-if="showLinkAnswer" class="link_answer__wrapper">
+            <div v-if="isAnswer" class="link_answer">
+              <img
+                src="../../public/images/main_smile.svg"
+                class="link_answer__image"
+              />
+              <div class="link_answer__text">Bravo！大正解！！！</div>
+            </div>
+            <div v-else class="link_answer">
+              <img
+                src="../../public/images/main_frown.svg"
+                class="link_answer__image"
+              />
+              <div class="link_answer__text">惜しい、不正解...！</div>
+            </div>
+            <button class="link_answer__button" @click="showAnswer = true">
               答えを見る
             </button>
           </div>
@@ -182,8 +208,9 @@ export default {
     return {
       tryGetArticle: 0,
       inputAnswer: "",
-      answerText: "",
       isAnswer: false,
+      showLinkAnswer: false,
+      showAnswer: false,
       isAnimationStart: [false, false, false],
       isAnimationEnd: [false, false, false],
     };
@@ -218,18 +245,23 @@ export default {
       return !this.isLoading && !!this.selectedWords.length;
     },
     tweetText() {
-      return `私は"${this.searchResult}"と答えました。`;
+      if (this.isAnswer) {
+        return `すごい！ あなたは"${this.articleData.title}"を当てました🤩`;
+      } else {
+        return `残念... あなたは"${this.articleData.title}"を"${this.inputAnswer}"と答えました...😭`;
+      }
     },
   },
   async created() {
-    await this.clickPlay();
+    // await this.clickPlay();
   },
   methods: {
     init() {
       this.tryGetArticle = 0;
       this.inputAnswer = "";
-      this.answerText = "";
       this.isAnswer = false;
+      this.showLinkAnswer = false;
+      this.showAnswer = false;
       this.isAnimationStart = [false, false, false];
       this.isAnimationEnd = [false, false, false];
     },
@@ -256,8 +288,8 @@ export default {
     async clickAnswer() {
       try {
         await this.searchAnswer();
-        this.answerText =
-          this.searchResult === this.articleData.title ? "正解！" : `不正解...`;
+        this.showLinkAnswer = true;
+        this.isAnswer = this.searchResult === this.articleData.title;
       } catch (e) {
         console.error("回答の取得に失敗");
       }

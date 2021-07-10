@@ -32,7 +32,7 @@
         <div class="about__image">
           <img
             class="about__image--inner"
-            src="../../public/images/home_children.jpeg"
+            src="../../public/images/home_children.png"
           />
         </div>
       </div>
@@ -43,13 +43,15 @@
       </div>
     </section>
     <section class="howto">
-      <div class="howto__topic">HowTo</div>
+      <div class="howto__topic">How To</div>
       <div class="howto__contents">
         <!-- ここはコンポーネントで切り出す -->
         <div class="howto__section howto__section--one">
           <div class="howto__section--inner">
             <div class="howto__section--topic">①考える。</div>
-            <div class="howto__section--image"></div>
+            <div class="howto__section--image">
+              <img src="../../public/images/about_1_white.png" alt="" />
+            </div>
             <div class="howto__section--subtopic">
               関連ワードから記事のタイトルを類推しよう。
             </div>
@@ -58,7 +60,9 @@
         <div class="howto__section howto__section--two">
           <div class="howto__section--inner">
             <div class="howto__section--topic">②もっと考える。</div>
-            <div class="howto__section--image"></div>
+            <div class="howto__section--image">
+              <img src="../../public/images/about_2_white.png" alt="" />
+            </div>
             <div class="howto__section--subtopic">
               さらに細かいヒントもチェックしよう。
             </div>
@@ -67,7 +71,9 @@
         <div class="howto__section howto__section--three">
           <div class="howto__section--inner">
             <div class="howto__section--topic">③発見する。</div>
-            <div class="howto__section--image"></div>
+            <div class="howto__section--image">
+              <img src="../../public/images/about_3_white.png" alt="" />
+            </div>
             <div class="howto__section--subtopic">
               解答後、実際に記事を見に行こう。
             </div>
@@ -76,7 +82,9 @@
         <div class="howto__section howto__section--four">
           <div class="howto__section--inner">
             <div class="howto__section--topic">④世界が広がる。</div>
-            <div class="howto__section--image"></div>
+            <div class="howto__section--image">
+              <img src="../../public/images/about_4_white.png" alt="" />
+            </div>
             <div class="howto__section--subtopic">
               また一つ、あなたの世界が広がりました。
             </div>
