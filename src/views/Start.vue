@@ -44,17 +44,20 @@ export default {
   &__button {
     margin-top: 10%;
     text-align: center;
+    letter-spacing: 1.5px;
     cursor: pointer;
+    transition-duration: 0.3s;
+    &:hover {
+      letter-spacing: 15px;
+    }
     &--sub {
       font-family: $noto-sans;
       font-size: 20px;
       margin-bottom: -10px;
-      letter-spacing: 1.5px;
     }
     &--main {
       font-family: $traviraj;
       font-size: 40px;
-      letter-spacing: 2px;
     }
   }
 }

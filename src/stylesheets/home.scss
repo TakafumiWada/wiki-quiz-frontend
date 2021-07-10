@@ -44,6 +44,10 @@ $border-size: 2.5px;
           font-family: $noto-sans;
           font-size: 20px;
           letter-spacing: 1.23px;
+          transition-duration: 0.3s;
+          &:hover {
+            letter-spacing: 10px;
+          }
         }
       }
     }
@@ -137,6 +141,10 @@ $border-size: 2.5px;
         font-family: $noto-sans;
         font-size: 28px;
         letter-spacing: 1.65px;
+        transition-duration: 0.3s;
+        &:hover {
+          letter-spacing: 10px;
+        }
       }
     }
   }

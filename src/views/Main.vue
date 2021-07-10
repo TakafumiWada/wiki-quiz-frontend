@@ -253,7 +253,7 @@ export default {
     },
   },
   async created() {
-    // await this.clickPlay();
+    await this.clickPlay();
   },
   methods: {
     init() {
