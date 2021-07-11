@@ -103,8 +103,23 @@ $border-size: 2.5px;
   &__button {
     margin-top: 4vh;
     button {
+      letter-spacing: 1.65px;
+      color: white;
+      background-color: transparent;
+      border: 1.5px solid white;
+      font-family: $traviraj;
       font-size: 20px;
-      padding: 5px 25px;
+      width: 100px;
+      padding: 1px 0;
+      cursor: pointer;
+      &:hover {
+        letter-spacing: 8px;
+      }
+      div {
+        text-align: center;
+        width: 100px;
+        transition-duration: 0.3s;
+      }
     }
   }
   &__image {

@@ -23,11 +23,13 @@
             <div>という声をよく聞く。</div>
           </div>
           <div class="about__text--sub">
-            <div>そんな大人に、昔のような新たな発見を届けることで、</div>
+            <div>そんな大人たちに、新たな発見に出会ってほしい。</div>
+            <div>そして、昔のようなワクワクを感じてもらい、</div>
             <div>活力に満ちた社会を作りたい。</div>
-            <div>テキストテキストテキストテキストテキスト</div>
           </div>
-          <!-- <div class="about__button"><button>more</button></div> -->
+          <div class="about__button">
+            <button><div>more</div></button>
+          </div>
         </div>
         <div class="about__image">
           <img
