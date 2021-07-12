@@ -1,4 +1,4 @@
-$border-size: 2.5px;
+$border-size: 1px;
 .top {
   height: 100vh;
   width: 100vw;
@@ -15,12 +15,12 @@ $border-size: 2.5px;
       font-family: $traviraj;
       margin: 20px 0;
       font-size: 100px;
-      font-weight: 600;
+      font-weight: 800;
       letter-spacing: 2.25px;
     }
     &--sub {
       font-family: $noto-serif;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 20px;
       letter-spacing: 1.57px;
     }
@@ -64,7 +64,7 @@ $border-size: 2.5px;
   }
 }
 .about {
-  height: 77vh;
+  height: 85vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -72,14 +72,14 @@ $border-size: 2.5px;
   background-color: $main-color;
   color: white;
   &__topic {
-    margin: 7vh 0;
+    margin-top: 8vh;
     font-family: $traviraj;
     font-weight: 600;
     font-size: 40px;
     letter-spacing: 0.9px;
   }
   &__contents {
-    margin-top: 5vh;
+    margin-top: 4vh;
     height: 100%;
     width: 100vw;
     max-width: 1500px;
@@ -131,7 +131,7 @@ $border-size: 2.5px;
   }
 }
 .section-footer {
-  height: 23vh;
+  height: 15vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -139,9 +139,9 @@ $border-size: 2.5px;
   background-color: $home-color;
   &__button {
     button {
-      height: 70px;
+      height: 50px;
       width: 300px;
-      font-size: 28px;
+      font-size: 24px;
       letter-spacing: 1.65px;
       color: white;
       background-color: transparent;
@@ -164,7 +164,7 @@ $border-size: 2.5px;
   }
 }
 .howto {
-  height: 90vh;
+  height: 85vh;
   width: 100vw;
   background-color: #2b2e4a;
   color: white;
@@ -172,15 +172,15 @@ $border-size: 2.5px;
   flex-direction: column;
   align-items: center;
   &__topic {
-    margin: 5vh 0 3vh 0;
+    margin: 8vh 0 3vh 0;
     font-family: $traviraj;
     font-weight: 600;
     font-size: 40px;
     letter-spacing: 0.9px;
   }
   &__contents {
-    height: 80%;
-    width: 100%;
+    height: 70%;
+    width: 90%;
     max-width: 1500px;
     display: flex;
     flex-wrap: wrap;
@@ -188,7 +188,7 @@ $border-size: 2.5px;
   }
   &__section {
     height: 50%;
-    width: 40%;
+    width: 43%;
     max-width: 750px;
     display: flex;
     flex-direction: column;
@@ -202,10 +202,12 @@ $border-size: 2.5px;
     }
     &--topic {
       width: 100%;
-      margin-top: 3%;
       font-family: $noto-sans;
       font-size: 1.5em;
       letter-spacing: 0.53px;
+      &--under {
+        margin-top: 1.5vh;
+      }
     }
     &--image {
       margin-top: 10px;

@@ -2,7 +2,7 @@
   <div>
     <section class="top">
       <div class="top__topic">
-        <div class="top__topic--main">WikiQuiz</div>
+        <div class="top__topic--main">QuizWiki</div>
         <div class="top__topic--sub">
           <div>100万以上の記事を持つWikipedia。</div>
           <div>そこから無作為に抽出されたタイトルを導き出そう。</div>
@@ -72,7 +72,9 @@
         </div>
         <div class="howto__section howto__section--three">
           <div class="howto__section--inner">
-            <div class="howto__section--topic">③発見する。</div>
+            <div class="howto__section--topic howto__section--topic--under">
+              ③発見する。
+            </div>
             <div class="howto__section--image">
               <img src="../../public/images/about_3_white.png" alt="" />
             </div>
@@ -83,7 +85,9 @@
         </div>
         <div class="howto__section howto__section--four">
           <div class="howto__section--inner">
-            <div class="howto__section--topic">④世界が広がる。</div>
+            <div class="howto__section--topic howto__section--topic--under">
+              ④世界が広がる。
+            </div>
             <div class="howto__section--image">
               <img src="../../public/images/about_4_white.png" alt="" />
             </div>

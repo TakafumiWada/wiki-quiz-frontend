@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="icon__container" @click="linkToTop">
-      <div class="icon__content">WikiQuiz</div>
+      <div class="icon__content">QuizWiki</div>
     </div>
   </header>
 </template>
@@ -32,7 +32,7 @@ export default {
   }
   &__content {
     font-family: $traviraj;
-    font-weight: 400;
+    font-weight: 700;
     margin: 5px 20px;
     font-size: 40px;
     letter-spacing: 0.9px;
