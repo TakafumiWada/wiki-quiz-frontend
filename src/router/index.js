@@ -30,4 +30,13 @@ const router = new VueRouter({
   routes,
 });
 
+router.afterEach(
+  (
+    to, // eslint-disable-line no-unused-vars
+    from // eslint-disable-line no-unused-vars
+  ) => {
+    window.scrollTo(0, 0);
+  }
+);
+
 export default router;
