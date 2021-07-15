@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="icon__container" @click="linkToTop">
-      <div class="icon__content">QuizWiki</div>
+      <div class="icon__content"></div>
     </div>
   </header>
 </template>
@@ -31,11 +31,12 @@ export default {
     cursor: pointer;
   }
   &__content {
-    font-family: $traviraj;
-    font-weight: 700;
-    margin: 5px 20px;
-    font-size: 40px;
-    letter-spacing: 0.9px;
+    height: 60px;
+    width: 120px;
+    margin: 0 15px;
+    z-index: 100;
+    background-image: url(../../public/images/QuizWiki_Logo.png);
+    background-size: cover;
   }
 }
 </style>
