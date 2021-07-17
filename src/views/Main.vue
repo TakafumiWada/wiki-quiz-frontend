@@ -308,7 +308,7 @@ export default {
       this.$set(this.isAnimationEnd, index, true);
     },
     tweetAnswer() {
-      const url = `https://twitter.com/intent/tweet?text=${this.tweetText}&url=https://wiki-quiz-frontend-prod.an.r.appspot.com/`;
+      const url = `https://twitter.com/intent/tweet?text=${this.tweetText}&url=https://www.quiz-wiki.com/`;
       window.open(url, "_blank");
     },
   },
