@@ -28,7 +28,7 @@
             <div>活力に満ちた社会を作りたい。</div>
           </div>
           <div class="about__button">
-            <button><div>more</div></button>
+            <button @click="linkToNote"><div>more</div></button>
           </div>
         </div>
         <div class="about__image">
@@ -112,6 +112,9 @@ export default {
   methods: {
     linkToMain() {
       this.$router.push("/start");
+    },
+    linkToNote() {
+      window.open("https://note.com/wadeee/n/n2d045697a859", "_blank");
     },
   },
 };
