@@ -3,8 +3,7 @@ import Vuex from "vuex";
 import axios from "axios";
 Vue.use(Vuex);
 
-const BASE_URL = "https://wiki-quiz-backend-prod.an.r.appspot.com";
-// const BASE_URL = "http://localhost:3000";
+const API_URL = process.env.VUE_APP_API_URL;
 const LIMITED_WORD_LENGTH = 18;
 
 const randomSelect = (array, num) => {
@@ -75,7 +74,7 @@ export default new Vuex.Store({
   actions: {
     async getArticleData(context) {
       context.commit("startLoading");
-      const res = await axios.get(`${BASE_URL}/article/get`);
+      const res = await axios.get(`${API_URL}/article/get`);
       context.commit("endLoading");
       const articleData = res.data;
       context.commit("getArticleData", articleData);
@@ -83,7 +82,7 @@ export default new Vuex.Store({
       context.commit("selectCategories");
     },
     async searchArticleData(context, payload) {
-      const res = await axios.post(`${BASE_URL}/article/search`, {
+      const res = await axios.post(`${API_URL}/article/search`, {
         text: payload.text,
       });
       const searchResult = res.data;
