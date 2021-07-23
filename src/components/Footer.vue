@@ -4,16 +4,16 @@
       <div class="footer__topic">WikiQuiz</div>
       <div class="footer__links">
         <div class="footer__link">
-          <router-link :to="{ path: '/', hash: '#top' }">TOP</router-link>
+          <a @click="linkToPage({ path: '/', hash: '#top' })">TOP</a>
         </div>
         <div class="footer__link footer__link--border-left">
-          <router-link :to="{ path: '/', hash: '#about' }">About</router-link>
+          <a @click="linkToPage({ path: '/', hash: '#about' })">About</a>
         </div>
         <div class="footer__link footer__link--border-left">
-          <router-link :to="{ path: '/', hash: '#howto' }">HowTo</router-link>
+          <a @click="linkToPage({ path: '/', hash: '#howto' })">HowTo</a>
         </div>
         <div class="footer__link footer__link--border-left">
-          <router-link :to="{ path: '/start' }">クイズに挑む</router-link>
+          <a @click="linkToPage({ path: '/start' })">クイズに挑む</a>
         </div>
       </div>
       <div class="footer__icons">
@@ -45,6 +45,13 @@ export default {
     },
     linkToNote() {
       window.open("https://note.com/wadeee", "_blank");
+    },
+    linkToPage(route) {
+      this.$router.push(route).catch(() => {
+        //ここ無理やり感
+        this.$router.push("/");
+        this.$router.push(route);
+      });
     },
   },
 };
@@ -91,6 +98,11 @@ export default {
   width: 150px;
   text-align: center;
   font-family: $noto-sans;
+  letter-spacing: 1.23px;
+  transition-duration: 0.3s;
+  &:hover {
+    letter-spacing: 4px;
+  }
   &--border-left {
     border-left: 1px solid;
     border-color: white;
