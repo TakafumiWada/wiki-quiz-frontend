@@ -107,6 +107,7 @@ export default {
     border-left: 1px solid;
     border-color: white;
   }
+  a,
   a:link,
   a:visited,
   a:hover,
