@@ -28,15 +28,16 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        behavior: "smooth",
+      };
+    }
+    return { x: 0, y: 0 };
+  },
 });
-
-router.afterEach(
-  (
-    to, // eslint-disable-line no-unused-vars
-    from // eslint-disable-line no-unused-vars
-  ) => {
-    window.scrollTo(0, 0);
-  }
-);
 
 export default router;

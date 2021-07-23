@@ -10,8 +10,12 @@
 export default {
   methods: {
     linkToTop() {
-      if (this.$router.currentRoute.name === "Home") return;
-      this.$router.push("/");
+      if (
+        this.$router.currentRoute.name === "Home" &&
+        this.$router.currentRoute.hash === "#top"
+      )
+        return;
+      this.$router.push({ path: "/", hash: "#top" });
     },
   },
 };
