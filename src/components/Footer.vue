@@ -3,10 +3,18 @@
     <div class="footer__contents">
       <div class="footer__topic">WikiQuiz</div>
       <div class="footer__links">
-        <div class="footer__link">Top</div>
-        <div class="footer__link footer__link--border-left">About</div>
-        <div class="footer__link footer__link--border-left">HowTo</div>
-        <div class="footer__link footer__link--border-left">クイズに挑む</div>
+        <div class="footer__link">
+          <router-link :to="{ path: '/', hash: '#top' }">TOP</router-link>
+        </div>
+        <div class="footer__link footer__link--border-left">
+          <router-link :to="{ path: '/', hash: '#about' }">About</router-link>
+        </div>
+        <div class="footer__link footer__link--border-left">
+          <router-link :to="{ path: '/', hash: '#howto' }">HowTo</router-link>
+        </div>
+        <div class="footer__link footer__link--border-left">
+          <router-link :to="{ path: '/start' }">クイズに挑む</router-link>
+        </div>
       </div>
       <div class="footer__icons">
         <div
@@ -79,7 +87,6 @@ export default {
 
 .footer__link {
   font-size: 20px;
-  // padding: 0vh 5vh;
   height: 28px;
   width: 150px;
   text-align: center;
@@ -87,6 +94,12 @@ export default {
   &--border-left {
     border-left: 1px solid;
     border-color: white;
+  }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: white;
   }
 }
 

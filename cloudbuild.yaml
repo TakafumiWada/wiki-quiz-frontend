@@ -10,4 +10,4 @@ steps:
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     args: ["gcloud", "app", "deploy", "--version", "${_VERSION}", "app.yaml"]
 substitutions:
-  _VERSION: v1-0-1
+  _VERSION: v1-0-2

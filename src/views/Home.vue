@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="top">
+    <section class="top" id="top">
       <div class="top__topic">
         <div class="top__topic--main">QuizWiki</div>
         <div class="top__topic--sub">
@@ -13,7 +13,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__topic">About</div>
       <div class="about__contents">
         <div class="about__text">
@@ -44,7 +44,7 @@
         <button @click="linkToMain"><div>Quizに挑む</div></button>
       </div>
     </section>
-    <section class="howto">
+    <section class="howto" id="howto">
       <div class="howto__topic">How To</div>
       <div class="howto__contents">
         <!-- ここはコンポーネントで切り出す -->
