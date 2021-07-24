@@ -82,8 +82,10 @@ export default new Vuex.Store({
       context.commit("selectCategories");
     },
     async searchArticleData(context, payload) {
-      const res = await axios.post(`${API_URL}/article/search`, {
-        text: payload.text,
+      const res = await axios.get(`${API_URL}/article/search`, {
+        params: {
+          text: payload.text,
+        },
       });
       const searchResult = res.data;
       context.commit("getSearchResult", { searchResult });
