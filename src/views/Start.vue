@@ -2,7 +2,7 @@
   <section class="start">
     <div class="start__text">
       <div>新たな発見を求めて</div>
-      <div><span class="start__text--en">WikiQuiz</span>に挑みますか？</div>
+      <div><span class="start__text--en">QuizWiki</span>に挑みますか？</div>
     </div>
     <div class="start__button" @click="clickEnter">
       <div class="start__button--sub">挑む</div>

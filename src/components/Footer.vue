@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__contents">
-      <div class="footer__topic">WikiQuiz</div>
+      <div class="footer__topic">QuizWiki</div>
       <div class="footer__links">
         <div class="footer__link">
           <a @click="linkToPage({ path: '/', hash: '#top' })">TOP</a>
